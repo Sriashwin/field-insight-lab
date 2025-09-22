@@ -8,60 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 210 10% 15%;
+    --background: 0 0% 98%;
+    --foreground: 210 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 10% 15%;
+    --card-foreground: 210 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 10% 15%;
+    --popover-foreground: 210 15% 20%;
 
-    --primary: 180 100% 40%;
+    --primary: 160 84% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 16% 93%;
-    --secondary-foreground: 210 10% 25%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 210 15% 25%;
 
-    --muted: 210 16% 95%;
-    --muted-foreground: 210 10% 45%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 10% 50%;
 
-    --accent: 200 100% 45%;
+    --accent: 160 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 180 100% 40%;
+    --border: 210 25% 90%;
+    --input: 210 25% 90%;
+    --ring: 160 84% 45%;
 
-    /* Professional Analytics Colors */
-    --success: 142 76% 36%;
+    /* Agricultural Theme Colors */
+    --success: 142 85% 42%;
     --success-foreground: 0 0% 100%;
-    --warning: 43 100% 50%;
-    --warning-foreground: 210 10% 15%;
+    --warning: 45 100% 60%;
+    --warning-foreground: 210 15% 20%;
     --danger: 0 84% 60%;
     --danger-foreground: 0 0% 100%;
     
-    /* Chart Colors */
-    --chart-1: 180 100% 40%;
-    --chart-2: 200 100% 45%;
-    --chart-3: 142 76% 36%;
-    --chart-4: 43 100% 50%;
-    --chart-5: 260 85% 58%;
+    /* Agricultural Chart Colors */
+    --chart-1: 160 84% 45%;
+    --chart-2: 200 100% 50%;
+    --chart-3: 142 85% 42%;
+    --chart-4: 45 100% 60%;
+    --chart-5: 280 85% 65%;
     
-    /* Analytics Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(180 100% 40%), hsl(200 100% 45%));
-    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(120 100% 35%));
-    --gradient-warning: linear-gradient(135deg, hsl(43 100% 50%), hsl(35 100% 55%));
+    /* Agricultural Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 45%), hsl(142 85% 42%));
+    --gradient-hero: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+    --gradient-success: linear-gradient(135deg, hsl(142 85% 42%), hsl(120 100% 35%));
+    --gradient-warning: linear-gradient(135deg, hsl(45 100% 60%), hsl(35 100% 65%));
     --gradient-danger: linear-gradient(135deg, hsl(0 84% 60%), hsl(350 85% 65%));
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(210 20% 0% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(210 20% 0% / 0.1), 0 2px 4px -1px hsl(210 20% 0% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(210 20% 0% / 0.1), 0 4px 6px -2px hsl(210 20% 0% / 0.05);
-    --shadow-glow: 0 0 20px hsl(180 100% 40% / 0.3);
+    /* Agricultural Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 25% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 25% 0% / 0.1), 0 2px 4px -1px hsl(210 25% 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(210 25% 0% / 0.1), 0 4px 6px -2px hsl(210 25% 0% / 0.05);
+    --shadow-glow: 0 0 20px hsl(160 84% 45% / 0.3);
+    --shadow-hero: 0 20px 40px -12px hsl(0 0% 0% / 0.4);
 
     --radius: 0.5rem;
 
@@ -127,6 +129,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
   }
 }

@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Download, ChevronDown, AlertTriangle, CheckCircle, Eye } from "lucide-react";
+import CropIQNavigation from "@/components/CropIQNavigation";
+import AgricultureHero from "@/components/AgricultureHero";
 import NavigationFilters from "@/components/NavigationFilters";
 import AlertCard from "@/components/AlertCard";
 import ChartSection from "@/components/ChartSection";
@@ -40,8 +41,14 @@ const TechnicianDashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-inter">
       {/* Navigation */}
+      <CropIQNavigation />
+      
+      {/* Hero Section */}
+      <AgricultureHero />
+
+      {/* Dashboard Filters */}
       <NavigationFilters
         selectedCrop={selectedCrop}
         setSelectedCrop={setSelectedCrop}
@@ -68,11 +75,12 @@ const TechnicianDashboard = () => {
         {/* Main Dashboard Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Panel - Spectral Map */}
-          <Card className="animate-slide-in shadow-lg">
+          <Card className="animate-slide-in shadow-lg border-border/50">
             <CardHeader className="pb-4">
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2 text-foreground">
                 <Eye className="h-5 w-5 text-primary" />
                 Crop Health Spectral Map
+                <Badge variant="secondary" className="ml-auto">Live</Badge>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -81,16 +89,16 @@ const TechnicianDashboard = () => {
           </Card>
 
           {/* Right Panel - Charts */}
-          <Card className="animate-slide-in shadow-lg" style={{ animationDelay: "0.2s" }}>
+          <Card className="animate-slide-in shadow-lg border-border/50" style={{ animationDelay: "0.2s" }}>
             <CardHeader className="pb-4">
-              <CardTitle className="flex items-center justify-between">
+              <CardTitle className="flex items-center justify-between text-foreground">
                 <span>Analytics Overview</span>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
+                  <Button variant="outline" size="sm" className="border-primary/20 text-primary hover:bg-primary/10">
                     <Download className="h-4 w-4 mr-2" />
                     CSV
                   </Button>
-                  <Button variant="outline" size="sm">
+                  <Button variant="outline" size="sm" className="border-primary/20 text-primary hover:bg-primary/10">
                     <Download className="h-4 w-4 mr-2" />
                     PDF
                   </Button>
